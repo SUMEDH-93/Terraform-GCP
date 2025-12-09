@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  project = "jenkins-project-480510"
+  project = "jenkins-project-480710"   # ⭐ Correct Project ID
   region  = "us-central1"
   zone    = "us-central1-a"
 }
@@ -28,7 +28,7 @@ resource "google_compute_instance" "jenkins_vm" {
     network = "default"
 
     access_config {
-      // Required to assign external IP
+      # Allocate external IP
     }
   }
 }
